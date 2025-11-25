@@ -3,6 +3,7 @@ services:
    container_name: jin_app #laravel_app
    ports:
      - "3030:80" #8080:80
+     - "5173:5173" #Vite用
    build: ./Docker/App
    volumes:
      - ./src:/var/www/html
