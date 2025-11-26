@@ -13,6 +13,11 @@ unzip \
 vim \
 libpng-dev \
 libpq-dev \
+curl \
+ca-certificates \
+gnupg \
+&& curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+&& apt-get install -y nodejs \
 && docker-php-ext-install pdo_mysql
 
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
